@@ -71,6 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ],
                         ),
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Container(
                               height: 60.h,
@@ -107,7 +108,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             Expanded(
                               child: SizedBox(
-                                height: 65.h,
                                 width: 274.w,
                                 child: CustomTextFormField(
                                   controller: phoneNumberController,
@@ -149,18 +149,21 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Row(
                           children: [
-                            Container(
-                              width: 70,
-                              height: 50,
-                              decoration: ShapeDecoration(
-                                color: Color(0xFFFFD700),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15)),
-                              ),
-                              child: Icon(
-                                Icons.my_location_outlined,
-                                size: 30,
-                                color: Colors.black,
+                            InkWell(
+                              onTap: () {},
+                              child: Container(
+                                width: 70,
+                                height: 50,
+                                decoration: ShapeDecoration(
+                                  color: Color(0xFFFFD700),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)),
+                                ),
+                                child: Icon(
+                                  Icons.my_location_outlined,
+                                  size: 30,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
                             SizedBox(
@@ -168,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             Expanded(
                               child: SizedBox(
-                                height: 65.h,
+                                //   height: 65.h,
                                 width: 274.w,
                                 child: CustomTextFormField(
                                   controller: locationController,

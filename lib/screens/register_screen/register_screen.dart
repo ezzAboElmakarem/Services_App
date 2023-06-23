@@ -40,7 +40,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 SizedBox(
                   height: 40.h,
                 ),
-                Center(
+                const Center(
                   child: Text(
                     'انشاء حساب',
                     style: TextStyle(fontWeight: FontWeight.w700, fontSize: 32),
@@ -119,21 +119,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         color: kPrimaryColor,
                         border: Border.all(),
                         borderRadius: BorderRadius.circular(15)),
-                    child: Row(
-                      children: [
-                        Icon(Icons.upload),
-                        Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.all(5.0),
-                          child: Text(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Row(
+                        children: [
+                          const Icon(Icons.upload),
+                          const Spacer(),
+                          Text(
                             ' صورة الرقم القومي',
                             style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 18.sp,
                                 fontWeight: FontWeight.w700),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -153,6 +153,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ],
                 ),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
                       height: 60.h,
@@ -183,12 +184,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Expanded(
                       child: SizedBox(
-                        height: 65.h,
+                        //  height: 65.h,
                         width: 274.w,
                         child: CustomTextFormField(
                           controller: phoneNumberController,
@@ -228,21 +229,24 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
                 Row(
                   children: [
-                    Container(
-                      width: 70,
-                      height: 50,
-                      decoration: ShapeDecoration(
-                        color: Color(0xFFFFD700),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15)),
-                      ),
-                      child: Icon(
-                        Icons.my_location_outlined,
-                        size: 30,
-                        color: Colors.black,
+                    InkWell(
+                      onTap: () {},
+                      child: Container(
+                        width: 70,
+                        height: 50,
+                        decoration: ShapeDecoration(
+                          color: const Color(0xFFFFD700),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15)),
+                        ),
+                        child: const Icon(
+                          Icons.my_location_outlined,
+                          size: 30,
+                          color: Colors.black,
+                        ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 5,
                     ),
                     Expanded(
