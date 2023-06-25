@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:services_app/consts/consts.dart';
+import 'package:services_app/screens/home_screen/home_screen_nav_bar.dart';
 import 'package:services_app/screens/register_screen/register_screen.dart';
 import 'package:services_app/widgets/button_widget.dart';
 import 'package:services_app/widgets/text_form_field_widget.dart';
@@ -208,7 +209,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           onTap: () {
                             if (formKey.currentState!.validate()) {
                               Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => LoginScreen(),
+                                builder: (context) => HomeScreen(),
                               ));
                             } else {}
                           },
