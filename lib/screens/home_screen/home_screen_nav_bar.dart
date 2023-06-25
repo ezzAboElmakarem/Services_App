@@ -13,9 +13,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 2;
   List<Widget> screens = [
-    ProfileScreen(),
-    ContractScreen(),
-    ServicesScreen(),
+    const ProfileScreen(),
+    const ContractScreen(),
+    const ServicesScreen(),
   ];
 
   @override
@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.yellowAccent,
+        selectedItemColor: const Color(0xffFFD700),
         unselectedItemColor: Colors.white,
         backgroundColor: Colors.black,
         type: BottomNavigationBarType.fixed,

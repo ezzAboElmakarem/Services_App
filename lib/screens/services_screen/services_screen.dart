@@ -58,7 +58,9 @@ class ServicesScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        showBottomSheet(
+                        showModalBottomSheet(
+                          isScrollControlled: true,
+                          useRootNavigator: true,
                           context: context,
                           builder: (context) => HoursBottomSheet(),
                         );
@@ -136,7 +138,9 @@ class ServicesScreen extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {
-                        showBottomSheet(
+                        showModalBottomSheet(
+                          isScrollControlled: true,
+                          useRootNavigator: true,
                           context: context,
                           builder: (context) => MonthBottomSheet(),
                         );
